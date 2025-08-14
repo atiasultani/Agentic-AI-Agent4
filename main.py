@@ -28,25 +28,30 @@ set_tracing_disabled(True)
 math_teacher= Agent(
     name="math_teacher",
     instructions="you are helping a student with math problems.",
-    model = model
+    model = model,
+    #handoff_description hum specif agent mai lagain gain taky manager agent is k handoof ko pr k kam is k hawaly dy.
+    handoffs_description="it is specialist in math subject"
     )
 
 physic_teacher= Agent(
     name="physic_teacher",
     instructions="you are helping a student with Physic problems.",
-    model = model
+    model = model,
+    handoffs_description="it is specialist in physic subject"
     )
 
 chemistery_teacher= Agent(
     name="chemistry_teacher",
     instructions="you are a Chemistery Teacher help a student.",
-    model = model
+    model = model,
+    handoffs_description="it is specialist in chemistry subject"
     )
 
 science_teacher= Agent(
     name="science_teacher",
     instructions="your name is {shushi} you are Teacher of a student in science subject.",
     model = model,
+    handoffs_description="it is specialist in science subject"
     )
 
 #Main Agent that triages the student requests
